@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration 
+				PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+				"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<!-- 不配置数据库驱动包位置，那么就会去默认的位置去找 -->
+
+	<context id="testContext" targetRuntime="MyBatis3" defaultModelType="flat">
+	  	<commentGenerator>
+	    	<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+	    	<property name="suppressAllComments" value="true"/>
+	    	<property name="suppressDate" value="true"/>
+ 	 	</commentGenerator>
+ 	 	
+		<!-- 数据库链接URL、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test" userId="root" password="root" />
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.wjb.db.po" targetProject="mavenDemo/src/main/java" />
+		<!-- 生成的映射文件报名和位置 -->
+		<sqlMapGenerator targetPackage="com.wjb.mapper" targetProject="mavenDemo/src/main/java" />
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator targetPackage="com.wjb.db.dao" targetProject="mavenDemo/src/main/java" type="XMLMAPPER" />
+		
+		<!-- 要生成的那些表(更改tableName ) -->
+		<table schema="test" tableName="battle_core_unity_prototype"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		<table schema="test" tableName="building_prototype"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		<!--  
+		<table schema="test" tableName="user_t"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		-->
+	</context>
+</generatorConfiguration>
