@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.sun.media.jfxmedia.logging.Logger;
 import com.wjb.db.po.UserT;
 import com.wjb.service.IUserService;
 
@@ -18,9 +19,7 @@ public class UserController {
 	public String showUser(HttpServletRequest request){
 		int userId=Integer.parseInt(request.getParameter("userId"));
 		UserT user = userService.getUserById(userId);
-//		user.getUserName();
-//		user.getId();
-//		user.getPassword();
+		System.out.println(user.getPassword());
 		request.setAttribute("user", user);
 		return "showUser";
 	}
