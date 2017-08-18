@@ -12,7 +12,7 @@
  	 	</commentGenerator>
  	 	
 		<!-- 数据库链接URL、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test" userId="root" password="root" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/db_forum" userId="root" password="root" />
 		<!-- 生成模型的包名和位置 -->
 		<javaModelGenerator targetPackage="com.wjb.db.po" targetProject="mavenDemo/src/main/java" />
 		<!-- 生成的映射文件报名和位置 -->
@@ -21,28 +21,6 @@
 		<javaClientGenerator targetPackage="com.wjb.db.dao" targetProject="mavenDemo/src/main/java" type="XMLMAPPER" />
 		
 		<!-- 要生成的那些表(更改tableName ) -->
-		<table schema="test" tableName="battle_core_unity_prototype"
-			enableInsert="true" 
-			enableCountByExample="true" 
-			enableSelectByPrimaryKey="true"
-			enableSelectByExample="true"
-			enableUpdateByPrimaryKey="true"
-			enableUpdateByExample="true"
-			enableDeleteByPrimaryKey="true"
-			enableDeleteByExample="true" 
-			selectByExampleQueryId="true">
-		</table>
-		<table schema="test" tableName="building_prototype"
-			enableInsert="true" 
-			enableCountByExample="true" 
-			enableSelectByPrimaryKey="true"
-			enableSelectByExample="true"
-			enableUpdateByPrimaryKey="true"
-			enableUpdateByExample="true"
-			enableDeleteByPrimaryKey="true"
-			enableDeleteByExample="true" 
-			selectByExampleQueryId="true">
-		</table>
 		<!--  
 		<table schema="test" tableName="user_t"
 			enableInsert="true" 
@@ -56,5 +34,62 @@
 			selectByExampleQueryId="true">
 		</table>
 		-->
+		
+		<table schema="db_forum" tableName="board"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>	
+		<table schema="db_forum" tableName="login_log"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		<table schema="db_forum" tableName="post"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		<table schema="db_forum" tableName="reply"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		<table schema="db_forum" tableName="user"
+			enableInsert="true" 
+			enableCountByExample="true" 
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="true"
+			enableUpdateByPrimaryKey="true"
+			enableUpdateByExample="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="true" 
+			selectByExampleQueryId="true">
+		</table>
+		
 	</context>
 </generatorConfiguration>
