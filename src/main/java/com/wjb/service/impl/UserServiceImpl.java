@@ -9,6 +9,7 @@ import com.wjb.db.dao.UserMapper;
 import com.wjb.db.po.User;
 import com.wjb.db.po.UserExample;
 import com.wjb.service.UserService;
+import com.wjb.tool.Formula;
 
 import javax.annotation.Resource;
 
@@ -48,7 +49,7 @@ public class UserServiceImpl implements UserService {
         return userList.get(0);
     }
 
-    @Override
+    @Override 
     public String getPassword(String userName) {
         if (userName == null) {
             return null;
@@ -76,4 +77,15 @@ public class UserServiceImpl implements UserService {
     public List<User> getAllUser() {
         return userMapper.selectByExample(null);
     }
+
+	@Override
+	public User getUserByUserNameAndPassword(String userName, String password) {
+		UserExample example = new UserExample();
+		example.createCriteria().andUserNameEqualTo(userName).andPasswordEqualTo(password);
+		 List<User> users = userMapper.selectByExample(example);
+		 if (Formula.isEmptyList(users)) {
+			return null;
+		}
+		return users.get(0);
+	}
 }

@@ -8,6 +8,6 @@
 <body>
   ${user.userName}
   ${user.password}
-  ${user.id}
+  ${user.userId}
 </body>
 </html>

@@ -8,7 +8,6 @@ import com.wjb.db.po.Board;
 import com.wjb.db.po.BoardExample;
 import com.wjb.service.BoardService;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service

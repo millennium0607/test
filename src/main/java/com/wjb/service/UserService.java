@@ -5,18 +5,20 @@ import java.util.List;
 import com.wjb.db.po.User;
 
 public interface UserService {
-	
-    public void addUser(User user);
 
-    public void updateUserByUserName(User user);
+	void addUser(User user);
 
-    public User getUserByUserName(String userName);
+	void updateUserByUserName(User user);
 
-    public void deleteUserByUserName(String userName);
+	User getUserByUserName(String userName);
 
-    public void loginSuccess(User user);
+	void deleteUserByUserName(String userName);
 
-    public String getPassword(String userName);
+	void loginSuccess(User user);
 
-    public List<User> getAllUser();
+	String getPassword(String userName);
+
+	List<User> getAllUser();
+
+	User getUserByUserNameAndPassword(String userName, String password);
 }
